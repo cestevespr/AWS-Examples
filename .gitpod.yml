@@ -4,7 +4,8 @@ tasks:
   #Inclusion of autoprompt for AWS CLI Ctr-C close
     env: 
       aws_cli_auto_prompt: on-partial 
-      
+
+  #Install the latest Amazon CLI utilizing linux curl installation
     before: | #| is yaml syntax
       cd /workspace
       curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
