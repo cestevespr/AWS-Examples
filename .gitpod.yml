@@ -1,7 +1,7 @@
 tasks:
   - name: aws-cli
     env: 
-      aws_cli_auto_prompt=on-partial
+      aws_cli_auto_prompt: on-partial
     before: 
       cd /workspace
       curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
