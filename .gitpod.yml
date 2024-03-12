@@ -1,7 +1,10 @@
 tasks:
   - name: aws-cli
+  
+  #Inclusion of autoprompt for AWS CLI Ctr-C close
     env: 
-      aws_cli_auto_prompt: on-partial
+      aws_cli_auto_prompt: on-partial 
+      
     before: | #| is yaml syntax
       cd /workspace
       curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
