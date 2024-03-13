@@ -5,7 +5,7 @@ require 'securerandom' # For generating secure random strings (UUIDs)
 
 # S3 Bucket configuration
 bucket_name = ENV['BUCKET_NAME']  # Fetching bucket name from environment variables
-region = 'us-east-1'           # AWS region where the bucket will be created
+region = 'us-west-1'           # AWS region where the bucket will be created REMOVE IF US-EAST-1
 
 # Initialize AWS S3 client
 client = Aws::S3::Client.new      # Creating a new instance of the S3 client
@@ -13,7 +13,7 @@ client = Aws::S3::Client.new      # Creating a new instance of the S3 client
 # Create S3 bucket
 resp = client.create_bucket({
   bucket: bucket_name,            # Name of the bucket
-  create_bucket_configuration: {
+  create_bucket_configuration: {  #REMOVE ROWS 16-18 IF US-EAST-1
     location_constraint: region   # Region for the bucket
   }
 })
