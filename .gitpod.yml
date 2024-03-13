@@ -7,7 +7,7 @@ tasks:
   
   #Inclusion of autoprompt for AWS CLI Ctr-C close
     env: 
-      aws_cli_auto_prompt: on-partial 
+      AWS_CLI_AUTO_PROMPT: on-partial 
 
   #Install the latest Amazon CLI utilizing linux curl installation
     before: | #| is yaml syntax
