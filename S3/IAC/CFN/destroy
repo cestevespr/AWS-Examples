@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
+# The shebang line above specifies the script should be run using the system's default bash interpreter.
 
 echo "== deploy s3 bucket via CFN"
+# This line outputs a simple message to standard output (stdout) indicating the script's purpose or current action.
 
 STACK_NAME="cfn-s3-simple"
+# This sets a variable named STACK_NAME with the value "cfn-s3-simple". This name is used as the CloudFormation stack name.
 
-aws  cloudformation delete-stack \
+aws cloudformation delete-stack \
     --stack-name $STACK_NAME
+# This command calls the AWS CLI to delete a CloudFormation stack.
+# It uses the `delete-stack` action from the `cloudformation` service and specifies which stack to delete with the `--stack-name` option.
+# The value of the STACK_NAME variable is used here to identify the stack to be deleted.
