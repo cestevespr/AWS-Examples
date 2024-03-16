@@ -1,7 +1,15 @@
-# Specify the region for the bucket
-region = "us-east-1"  # Example: 'us-west-2' for Oregon
-bucket_name = "my-new-bucket-name"  # Ensure this is unique across all existing bucket names
+import boto3
+
+# Initialize a boto3 S3 resource
+s3 = boto3.resource('s3')
+
+# Specify your unique bucket name
+bucket_name = "my-unique-new-bucket-name-1234"
+
+
+bucket = s3.Bucket(bucket_name)
 
 # Create the S3 bucket
-s3.delete_bucket(Bucket=bucket_name,
-                 CreateBucketConfiguration={'LocationConstraint': region})
+bucket.delete()
+
+print(f"Bucket '{bucket_name}' deleted successfully.")
