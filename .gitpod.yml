@@ -3,8 +3,7 @@ tasks:
   - name: Python (Boto3)
     before: |
       pip install boto3
-      import boto3
-      s3 = boto3.client('s3')
+      
   - name: Terraform
     before: |
       sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
